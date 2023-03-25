@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="" onsubmit="" method="">
+        <fieldset id="first">
+            <legend>&nbsp;Email&nbsp;</legend>
+            <div>
+                <input type="email" name="emailOne" id="email" placeholder="Example@sji.edu.sg" oninput="validateEmail()" required>
+            </div>
+        </fieldset>
+        <span id="emailError"></span>
+        <div id="checkboxDiv">
+            <div>
+                <input type="checkbox" name="Agreed to T&C's One" id="tnc" onchange="validateCheckbox()">
+                <label>&nbsp;I agree to the <a href="tnc.html" target="_blank">Terms and Conditions</a></label>
+            </div>
+            <span id="checkboxError"></span>
+        </div>
+        <div id="submitBtnDiv">
+            <div id="submitBarrier" onclick="formValidation()"></div>
+            <button type="submit" id="submit-form">Next</button>
+        </div>
+    </form>
+
+
+    <form>
+        <fieldset id="second">
+            <legend>&nbsp;Pin&nbsp;</legend>
+            <div>
+                <input type="text" name="pin" id="pin" placeholder="E.g. 234e662d64070ece2dafe56976252d2f28425fde59526714392b72dcf0e9598e" oninput="wrongPin()" required>
+            </div>
+        </fieldset>
+        <div id="pinBtnDiv">
+            <div id="retry" onclick="aftPin()">Retry</div>
+            <div id="next" onclick="wrongPin()">Next</div>
+        </div>
+        <span style="margin-left: -160px; margin-top: 30px; width: 120px; font-size: 11px;">Note - If you did not receive the pin, please retry the earlier form and double-check that your email is correct.</span>
+    </form>
+
+
+    <form action="https://script.google.com/macros/s/AKfycbwMrROKdar_ZeXwDbRss-_cxekxYU7-pn_OxfH9TxmQmJTcgwA85DuNs1F5oFH52WLO/exec" target="_blank" onsubmit="" method="">
+        <fieldset id="retryField">
+            <legend>&nbsp;Email&nbsp;</legend>
+            <div>
+                <input type="email" name="Email" id="retryEmail" placeholder="Example@sji.edu.sg" oninput="retryValidateEmail()" required>
+            </div>
+        </fieldset>
+        <span id="retryEmailError"></span>
+        <div id="retryCheckboxDiv">
+            <div>
+                <input type="checkbox" name="Agreed to T&C's" id="retrytnc" onchange="retryValidateCheckbox()">
+                <label>&nbsp;I agree to the <a href="tnc.html" target="_blank">Terms and Conditions</a></label>
+            </div>
+            <span id="retryCheckboxError"></span>
+        </div>
+        <div id="retrySubmitBtnDiv">
+            <div id="retrySubmitBarrier" onclick="retryFormValidation()"></div>
+            <button type="submit" id="retrySubmit-form">Next</button>
+            <a id="downloadZip" href="./Media/3.2.88_0-20230325T144052Z-001.zip" download></a>
+        </div>
+    </form>
+
+    <div style="width: 100vw; height: 100vh; display: flex; flex-direction: row; justify-content: center; align-items: center;">
+        <div id="prevImg" onclick="changeImg('prev')">&lt;</div>
+        <img id="instructionImg" src="./Media/instructions1.png" alt="1">
+        <div id="nextImg" onclick="changeImg('next')">&gt;</div>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>

@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: 'Nunito', sans-serif;
+    background-color: wheat;
+}
+
+body {
+    overflow: hidden;
+}
+
+form {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+fieldset {
+    width: 250px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: solid #151619;
+}
+
+legend {
+    font-size: 15px;
+    padding: 0;
+}
+
+#email,
+#pin,
+#retryEmail {
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    background-color: wheat;
+}
+
+
+
+#checkboxDiv,
+#retryCheckboxDiv {
+    width: 285px;
+    margin: 30px 0;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+#submitBtnDiv,
+#retrySubmitBtnDiv {
+    width: 280px;
+    position: relative;
+}
+
+#submit-form,
+#retrySubmit-form {
+    border: none;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    color: white;
+    background-color: #151619;
+    pointer-events: none;
+}
+
+#submitBarrier,
+#retrySubmitBarrier {
+    border: none;
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    color: white;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#pinBtnDiv {
+    width: 280px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+#next,
+#retry {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 25%;
+    height: 35px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    color: white;
+    background-color: #151619;
+    cursor: pointer;
+}
+
+#emailError,
+#retryEmailError {
+    color: red;
+    font-size: 11px;
+    margin-top: -20px;
+    margin-left: -70px;
+}
+
+#checkboxError,
+#retryCheckboxError {
+    color: red;
+    font-size: 11px;
+    margin-top: 3px;
+    margin-left: 3px;
+}
+
+#tncDiv,
+#retrytncDiv {
+    margin-left: 15px;
+}
+
+#backAnchor {
+    text-decoration: none;
+    color: black;
+    margin-left: 5px;
+}
+
+#prevImg,
+#nextImg {
+    font-size: 35px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    margin: 20px;
+    background-color: #151619;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+#prevImg {
+    opacity: 0;
+    cursor: default;
+}
+
+#instructionImg {
+    width: 60%;
+}
